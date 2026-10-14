@@ -7,8 +7,13 @@ load_dotenv(override=True)
 api_key = os.getenv("LLM_API_KEY")
 BASE_URL = os.getenv("LLM_BASE_URL")
 
+model = "gpt-5.4-mini"
+
+temperature = 2
+max_tokens = 2086
+
 def llm_connect(
-    model: str,
+    model: str = model,
     api_key: str = api_key,
     temperature: float = 0,
     max_tokens: int = 512
